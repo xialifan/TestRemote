@@ -1,0 +1,2 @@
+include ':app', ':remotelib'
+rootProject.name='TestRemote'
