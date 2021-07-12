@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.game.sdk.reconstract.ad">
+    <application>
+        <!--&lt;!&ndash; GDT start================== &ndash;&gt;-->
+        <!--&lt;!&ndash; targetSDKVersion >= 24时才需要添加这个provider。provider的authorities属性的值为${applicationId}.fileprovider，请开发者根据自己的${applicationId}来设置这个值，例如本例中applicationId为"com.qq.e.union.demo"。 &ndash;&gt;-->
+        <!--<provider-->
+        <!--android:name="com.qq.e.comm.GDTFileProvider"-->
+        <!--android:authorities="${applicationId}.gdt.fileprovider"-->
+        <!--android:exported="false"-->
+        <!--android:grantUriPermissions="true">-->
+        <!--<meta-data-->
+        <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+        <!--android:resource="@xml/gdt_file_path" />-->
+        <!--</provider>-->
+
+        <!--<activity-->
+        <!--android:name="com.qq.e.ads.PortraitADActivity"-->
+        <!--android:configChanges="keyboard|keyboardHidden|orientation|screenSize"-->
+        <!--android:screenOrientation="portrait" />-->
+        <!--<activity-->
+        <!--android:name="com.qq.e.ads.LandscapeADActivity"-->
+        <!--android:configChanges="keyboard|keyboardHidden|orientation|screenSize"-->
+        <!--tools:replace="android:screenOrientation"-->
+        <!--android:screenOrientation="landscape" />-->
+
+        <!--&lt;!&ndash; 声明SDK所需要的组件 &ndash;&gt;-->
+        <!--<service-->
+        <!--android:name="com.qq.e.comm.DownloadService"-->
+        <!--android:exported="false" />-->
+        <!--&lt;!&ndash; 请开发者注意字母的大小写，ADActivity，而不是AdActivity &ndash;&gt;-->
+
+        <!--<activity-->
+        <!--android:name="com.qq.e.ads.ADActivity"-->
+        <!--android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />-->
+        <!--&lt;!&ndash; GDT end================== &ndash;&gt;-->
+
+<!--        <provider-->
+<!--            android:name="com.qq.e.comm.GDTFileProvider"-->
+<!--            android:authorities="${applicationId}.gdt.fileprovider"-->
+<!--            android:exported="false"-->
+<!--            android:grantUriPermissions="true">-->
+<!--            <meta-data-->
+<!--                android:name="android.support.FILE_PROVIDER_PATHS"-->
+<!--                android:resource="@xml/gdt_file_path" />-->
+<!--        </provider>-->
+
+
+
+    </application>
+</manifest>
