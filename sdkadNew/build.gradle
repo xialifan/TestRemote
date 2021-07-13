@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.kezong.fat-aar'
-apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.xialifan'
+//apply plugin: 'com.github.dcendents.android-maven'
+//group='com.github.xialifan'
 
 android {
     compileSdkVersion 28
@@ -42,10 +42,32 @@ dependencies {
 //    compileOnly files('libs\\mediation_ad_sdk_2.7.1.2.aar')
 //    compileOnly files('libs\\open_ad_sdk_3.6.1.3.aar')
 //    embed project(path: 'GDTSDK.unionNormal.4.370.1240.aar', configuration: 'default')
-    embed (name:'GDTSDK.unionNormal.4.370.1240',ext:'aar')
-    embed (name:'mediation_ad_sdk_2.7.1.2',ext:'aar')
-    embed (name:'open_ad_sdk_3.6.1.3',ext:'aar')
+    implementation (name:'GDTSDK.unionNormal.4.370.1240',ext:'aar')
+    implementation (name:'mediation_ad_sdk_2.7.1.2',ext:'aar')
+    implementation (name:'open_ad_sdk_3.6.1.3',ext:'aar')
     compileOnly files('refer\\GuaiMaoSdk_3.8.8.2.jar')
+
+
+
+}
+
+apply plugin: 'maven'
+ext {
+    GITHUB_REPO_PATH = '/'
+    PUBLISH_GROUP_ID = 'com.gm88'
+    PUBLISH_ARTIFACT_ID = 'ad_lib'
+    PUBLISH_VERSION = '3.8.8.3'
+}
+uploadArchives {
+    repositories.mavenDeployer {
+        def deployPath = file(project.GITHUB_REPO_PATH)
+        repository(url: "file://${deployPath.absolutePath}")
+        pom.project {
+            groupId project.PUBLISH_GROUP_ID
+            artifactId project.PUBLISH_ARTIFACT_ID
+            version project.PUBLISH_VERSION
+        }
+    }
 
 }
 
